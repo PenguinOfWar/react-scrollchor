@@ -9,6 +9,10 @@ export default class Scrollchor extends React.Component {
     this.simulateClick = this._handleClick;
   }
 
+  componentWillReceiveProps(nextProps) {
+    this._setup(nextProps);
+  }
+
   static propTypes = {
     to: PropTypes.string.isRequired,
     animate: PropTypes.shape({
